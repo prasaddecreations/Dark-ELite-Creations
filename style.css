@@ -145,5 +145,118 @@
 /* End About Section */
 
 /* Service  Section */
+.Services{
+  width: 100%;
+   background-color: #000;
+   color: #fff;
 
+}
+
+.serviceFirstSection{
+  width: 100%;
+  display: flex;
+  padding: 2rem 5rem;
+  justify-content: space-around;
+
+}
+
+.serviceTitle{
+  width: 50%;
+}
+
+.serviceTitle h2{
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.serviceTitle h2 .asterisk{
+  color: #E60808;
+  font-size: 1.2rem;
+  padding-right: 0.3rem;
+}
+
+.serviceTitle h1{
+  font-size: 2.9rem;
+  font-weight: 400;
+  margin-top: .3rem;
+}
+
+.serviceTitle h1 .redColor{
+  color: #E60808;
+  font-weight: 600;
+}
+
+.serviceDescription{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.serviceDescription p{
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.serviceButtons a
+{
+  text-decoration: none;
+  background-color: #333333;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+}
+
+.serviceButtons .bottonIcon{
+  background-color: #E60808;
+  color: #fff;
+  padding: 1rem 1rem;
+  border-radius: 50%;
+}
+
+
+.serviceSecondSection{
+  width: 100%;
+  padding: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.serviceBox{
+  width: 32%;
+  background-image: linear-gradient(to right bottom, #000000, #070606, #0d0c0d, #111112, #151516);
+  padding: 2rem;
+  border-radius: 2rem;
+  border: 1px solid #555;
+}
+
+.serviceBoxLogo{
+  display: flex;
+  justify-content: space-between;
+}
+
+.serviceBoxLogo .diamond{
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.serviceBoxLogo .boxArrow{
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.serviceBoxContent {
+  margin-top: 5rem;
+}
+
+.serviceBoxContent h1{
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.serviceBoxContent p{
+  font-size: 1rem;
+  margin-top: 1rem;
+  line-height: 1.5rem;
+}
 /* End Service Section */
