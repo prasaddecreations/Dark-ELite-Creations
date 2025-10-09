@@ -7,137 +7,140 @@
     }
 
     /* ===== HERO SECTION ===== */
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px 100px;
+    background: radial-gradient(circle at center, #111 0%, #000 100%);    
+    position : relative;
+    background-image: repeating-radial-gradient(circle, #000000e3 0, rgb(0, 0, 0) 6px, rgb(0, 0, 0) 20px);
+    /* background-image: url("images/SL.122019.26260.38.jpg"); */
+}
+
+.hero-text{
+    width: 100%;
+}
+
+.hero h1 {
+    font-size: 7rem;
+    font-weight: 400;
+    font-family: 'Open Sans';
+    line-height: 0.9;
+    color: #fff;
+}
+
+.hero h1 span {
+    font-size: 5rem;
+    font-family: 'Open Sans';
+    color: #E60808;
+    font-weight: 700;
+}
+
+.hero p {
+    margin-top: 20px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ccc;
+    max-width: 950px;
+}
+
+/* ===== BUTTONS ===== */
+.buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    gap: 25px;
+}
+
+.play-btn {
+    width: 70px;
+    height: 70px;
+    background: #626161be;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.play-btn i{
+    color: #d1d1d1;
+    font-size: 26px;
+}
+
+.cta-btn {
+    display: flex;
+    align-items: center;
+    background: #333333a6;
+    color: #fff;
+    border-radius: 50px;
+    padding: 14px 26px;
+    font-weight: 600;
+    gap: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.cta-btn:hover {
+    background: #333333a6;
+    color: rgba(255, 255, 255, 0.723);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px #dfdede82;
+    border: solid 1px #e8e8e8d8;
+}
+
+.cta-btn i{
+    color: #fff;
+    font-size: 16px;
+}
+
+.cta-btn:hover i{
+    transform: rotate(-40deg);
+}
+
+/* ===== RESPONSIVE =====
+@media (max-width: 1024px) {
     .hero {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      padding: 100px;
-      background: radial-gradient(circle at center, #111 0%, #000 100%);    
-      position: relative;
-      background-image: repeating-radial-gradient(circle, #111 0, rgb(0, 0, 0) 6px, rgb(0, 0, 0) 20px);
-    }
-
-    .hero h1 {
-      font-size: 4.5rem;
-      font-weight: 400;
-      line-height: 1.2;
-      color: #fff;
-      max-width: 900px;
-    }
-
-    .hero h1 span {
-      color: #E60808;
-      font-weight: 700;
-    }
-
-    .hero p {
-      margin-top: 20px;
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #ccc;
-      max-width: 650px;
-    }
-
-    /* ===== BUTTONS ===== */
-    .buttons {
-      display: flex;
-      align-items: center;
-      margin-top: 40px;
-      gap: 25px;
-    }
-
-    .play-btn {
-      width: 70px;
-      height: 70px;
-      background: #b4ff00;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #000;
-      font-size: 28px;
-      cursor: pointer;
-      position: relative;
-    }
-
-    .play-btn::after {
-      /* content: '▶'; */
-      position: absolute;
-      color: #000;
-      font-size: 26px;
-    }
-
-    .cta-btn {
-      display: flex;
-      align-items: center;
-      background: #333;
-      color: #fff;
-      border-radius: 50px;
-      padding: 14px 26px;
-      font-weight: 600;
-      gap: 10px;
-      cursor: pointer;
-      text-decoration: none;
-      transition: 0.3s ease;
-    }
-
-    .cta-btn span {
-      background: #b4ff00;
-      color: #000;
-      border-radius: 50%;
-      width: 30px;
-      height: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 16px;
-    }
-
-    .cta-btn:hover {
-      background: #555;
-    }
-
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 1024px) {
-      .hero {
         padding: 80px 60px;
-      }
-      .hero h1 {
-        font-size: 3.5rem;
-      }
     }
+    .hero h1 {
+        font-size: 3.5rem;
+        }
+} */
 
-    @media (max-width: 768px) {
-      .hero {
+/* @media (max-width: 768px) {
+    .hero {
         padding: 60px 40px;
-      }
-      .hero h1 {
+    }
+    .hero h1 {
         font-size: 2.8rem;
-      }
-      .buttons {
+    }
+    .buttons {
         flex-direction: column;
         align-items: flex-start;
-      }
     }
+} */
 
-    @media (max-width: 480px) {
-      .hero {
+/* @media (max-width: 480px) {
+    .hero {
         padding: 50px 25px;
-      }
-      .hero h1 {
+    }
+    .hero h1 {
         font-size: 2.2rem;
-      }
-      .play-btn {
+    }
+    .play-btn {
         width: 60px;
         height: 60px;
-      }
-      .cta-btn {
+    }
+    .cta-btn {
         font-size: 0.9rem;
         padding: 12px 22px;
-      }
     }
+} */
 /* End Hero Section */
 
 /* About  Section */
