@@ -33,11 +33,15 @@
     color: #fff;
 }
 
-.hero h1 span {
+.hero-text h2 span {
   font-size: 5rem;
   font-family: 'Open Sans';
   color: #E60808;
   font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  min-height: 1.4em;
+  display: flex;
 }
 
 
@@ -115,7 +119,7 @@
   .hero h1 {
     font-size: 3rem;
   }
-  .hero h1 span{
+  .hero h2 span{
     font-size: 1.8rem;
   }
 }
