@@ -714,6 +714,7 @@ body {
   .Expert-grid{
     width: 100%;
     grid-template-columns: 1fr;
+    padding: 10px;
   }
   .Expert-text h1{
     font-size: 2rem;
