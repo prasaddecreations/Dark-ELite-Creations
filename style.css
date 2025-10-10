@@ -324,10 +324,14 @@ body {
     margin-left: 0;
   }
 
+
 .left-section h1{
   font-size: 2.5rem;
   line-height: 3rem;
 }
+
+    
+
 }
 /* End About Section */
 
@@ -449,6 +453,7 @@ body {
   line-height: 1.5rem;
 }
 /* End Service Section */
+
 
 /* WHY CHOOSE section */
  
@@ -631,3 +636,239 @@ body {
 }
 
 /* End why choose section */
+
+/* start Expert Section */
+.Expert-section{
+  display: flex;
+  background-color:#080808;
+  justify-content: center;
+  padding: 50px 0px;
+}
+
+.Expert-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 85%;
+  gap: 20px;
+  padding: 40px;
+  border: 12px solid;
+  border-radius: 8px;
+  border-image: linear-gradient(to bottom, #E60808, #0000007e) 1;
+}
+
+
+.Expert-text{
+   padding:38px 12px;
+}
+.Expert-text h1{
+  color: white;
+  font-size: 50px;
+  margin-bottom: 60px;
+}
+
+.Expert-text h1 span{
+  color: #E60808;
+  font-size: 50px;
+}
+
+.Exp-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.Exp strong{
+  color: #E60808;
+  font-size: 26px;
+}
+.Exp p{
+  color: white;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+.Expt-card{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  padding:38px 12px;
+  box-sizing:border-box;
+}
+
+.Expt-icon i{
+  color: white;
+}
+.Expt-para strong{
+  color:#E60808;
+  font-size: 26px;
+}
+.Expt-para p{
+  color: white;
+  line-height: 1.5rem;
+  font-size: 16px;
+}
+
+/* End Expert Section */
+
+
+
+
+/* joinAgency */
+  .joinAgency{
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+  }
+
+  .joinAgencyFirstSection{
+    width: 100%;
+    display: flex;
+    padding: 2rem;
+
+  }
+  .joinAgencyTitle{
+    width: 50%;
+  }
+
+.joinAgencyTitle h2 .asterisk{
+  color: #E60808;
+  font-size: 1.2rem;
+  margin-right: .5rem;
+}
+
+.joinAgencyTitle h2{
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.joinAgencyTitle h1{
+    font-size: 2.9rem;
+  font-weight: 400;
+  margin-top: .3rem;
+}
+
+.joinAgencyTitle h1 span{
+  color: #E60808;
+  font-weight: 600;
+}
+
+.joinAgencyDescription p{
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding: 2rem 5rem;
+  }
+  .joinAgencyDescription{
+    width: 50%;
+  }
+
+  .joinAgencySecondSection{
+    width: 100%;
+    display: flex;
+  
+  }
+
+  .joinBox{
+    position: relative;
+    width: 35%;
+  
+    padding: 2rem;
+  
+    }
+
+  .joinBox .joinAgencyLogo{
+    width: 10%;
+    position: absolute;
+    top:50;
+    left: 30;
+    background-color: #E60808;
+    padding-top: 1.3rem;
+    padding-bottom: 1.4rem;
+    padding-left: 1.5rem;
+    padding-right: 4rem;
+    border-radius: 50%;
+
+  }
+    .joinBox .joinAgencyLogo .insta{
+      font-size: 3rem;
+      display: inline;
+    }
+
+  .joinAgencySocailMedia{
+    background-color: #534f4f;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    padding: 2rem;
+    margin-top: 3.3rem;
+    margin-left: 2rem;
+    border-radius: 3rem;
+    border: 1px solid #ccc;
+  }
+
+   .joinAgencySocailMedia h1{
+    font-size: 1.3rem;
+    padding-left: 0.3rem;
+   }
+
+   .joinAgencySocailMedia h1 span{
+    font-size: 1rem;
+    font-weight: 400;
+   } 
+
+   .joinAgencySocailMedia .arrowright{
+    font-size: 2rem;
+   }
+/* END joinAgency */
+
+@media (max-width: 992px){
+  .serviceFirstSection{
+    width: 100%;
+    flex-direction: column;
+    padding: 2rem 2rem;
+  }
+  .serviceTitle{
+  width: 100%;
+}
+.serviceSecondSection{
+  width: 100%;
+  flex-direction: column;
+  gap : 2rem;
+}
+.serviceBox{
+  width: 100%;
+
+}
+
+.serviceDescription{
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+  font-size: 1rem;
+}
+.serviceDescription p{
+  margin-bottom: 1rem;
+}
+
+.joinAgencyFirstSection{
+  flex-direction: column;
+}
+.joinAgencyTitle{
+  width: 100%;
+}
+.joinAgencyDescription{
+  width: 100%;
+  padding: 0;
+}
+.joinAgencyDescription p{
+  padding: 0;
+  font-size: 1rem;
+}
+.joinAgencySecondSection{
+  flex-direction: column;
+}
+.joinBox{
+  width: 100%;
+}
+}
+
+
