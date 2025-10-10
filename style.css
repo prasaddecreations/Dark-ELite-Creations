@@ -102,28 +102,24 @@
     transform: rotate(-40deg);
 }
 
-/* ===== RESPONSIVE =====
-@media (max-width: 1024px) {
-    .hero {
-        padding: 80px 60px;
-    }
-    .hero h1 {
-        font-size: 3.5rem;
-        }
-} */
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px){
+ .hero {
+    padding: 80px 60px;
+  }
+  .hero-text{
+    justify-content: center;
+  }
+  .hero h1 {
+    font-size: 3rem;
+  }
+  .hero h1 span{
+    font-size: 1.8rem;
+  }
+}
 
-/* @media (max-width: 768px) {
-    .hero {
-        padding: 60px 40px;
-    }
-    .hero h1 {
-        font-size: 2.8rem;
-    }
-    .buttons {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-} */
+
+
 
 /* @media (max-width: 480px) {
     .hero {
@@ -140,7 +136,7 @@
         font-size: 0.9rem;
         padding: 12px 22px;
     }
-} */
+}
 /* End Hero Section */
 
 /* About  Section */
@@ -734,6 +730,41 @@ overflow: hidden;
   font-size: 16px;
 }
 
+@media (max-width: 992px){
+  .Expert-section{
+    width: 100%;
+    flex-direction: column;
+    padding: 2rem 2rem;
+  }
+  .Expert-grid{
+    width: 100%;
+    grid-template-columns: 1fr;
+    padding: 0px;
+    gap: 0px;
+  }
+  .Expert-text h1{
+    font-size: 1.8rem;
+  }
+  .Expert-text h1 br{
+    display: none;
+  }
+  .Exp-grid{
+    grid-template-columns: 1fr;
+  }
+  .Exp p{
+    font-size: 1.2rem;
+  }
+  .Expt-card{
+    gap: 10px;
+  }
+  .Expt-para strong{
+    font-size: 1.2rem;
+  }
+  .Expt-para p{
+    font-size: 1rem;
+    margin-top: 0px;
+  }
+}
 /* End Expert Section */
 
 
