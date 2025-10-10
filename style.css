@@ -323,6 +323,8 @@ body {
     padding: 60px 30px;
     margin-left: 0;
   }
+
+    
 }
 /* End About Section */
 
@@ -445,3 +447,75 @@ body {
 }
 /* End Service Section */
 
+/* start Expert Section */
+.Expert-section{
+  display: flex;
+  background-color:#080808;
+  justify-content: center;
+  padding: 50px 0px;
+}
+
+.Expert-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 85%;
+  gap: 20px;
+  padding: 40px;
+  border: 12px solid;
+  border-radius: 8px;
+  border-image: linear-gradient(to bottom, #E60808, #0000007e) 1;
+}
+
+
+.Expert-text{
+   padding:38px 12px;
+}
+.Expert-text h1{
+  color: white;
+  font-size: 50px;
+  margin-bottom: 60px;
+}
+
+.Expert-text h1 span{
+  color: #E60808;
+  font-size: 50px;
+}
+
+.Exp-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.Exp strong{
+  color: #E60808;
+  font-size: 26px;
+}
+.Exp p{
+  color: white;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+.Expt-card{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  padding:38px 12px;
+  box-sizing:border-box;
+}
+
+.Expt-icon i{
+  color: white;
+}
+.Expt-para strong{
+  color:#E60808;
+  font-size: 26px;
+}
+.Expt-para p{
+  color: white;
+  line-height: 1.5rem;
+  font-size: 16px;
+}
+
+/* End Expert Section */
