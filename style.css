@@ -525,22 +525,47 @@ body {
   flex-direction: column;
   gap: 30px;
   justify-content: center;
+  position: relative;
+overflow: hidden;
+
 }
 
-.why-choose-feature-box{
-  background-color: #00000000;
+.why-choose-feature-box {
+  position: relative;
+  background: rgba(129, 129, 129, 0.1); /* translucent glass base */
   border-radius: 20px;
-  padding: 20px ;
-  border: 1px solid #1e2017;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
+  border: 1px solid rgba(122, 122, 122, 0.671); /* subtle neon border */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  animation: neonPulse 3s infinite ease-in-out;
 }
 
-.why-choose-feature-box:hover{
-  background: linear-gradient(135deg, rgba(25,25,25,0.8), rgba(0,0,0,0.5));
-  transform: translateY(-5px);
-  box-shadow: 0 0 15px rgba(177,255,65,0.2);
+.why-choose-feature-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.3),
+    rgba(255, 255, 255, 0.05)
+  );
+  opacity: 0.4;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
 }
+
+.why-choose-feature-box:hover {
+  transform: translateY(-6px);
+}
+
+.why-choose-feature-box:hover::before {
+  opacity: 0.7;
+}
+
 
 .why-choose-feature-title{
   font-size: 22px;
