@@ -715,9 +715,10 @@ body {
     width: 100%;
     grid-template-columns: 1fr;
     padding: 0px;
+    gap: 0px;
   }
   .Expert-text h1{
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   .Expert-text h1 br{
     display: none;
@@ -727,6 +728,9 @@ body {
   }
   .Exp p{
     font-size: 1.2rem;
+  }
+  .Expt-card{
+    gap: 10px;
   }
   .Expt-para strong{
     font-size: 1.2rem;
