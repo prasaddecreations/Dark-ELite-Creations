@@ -1606,6 +1606,7 @@ body {
   }
 }
 
+
 @media (max-width: 600px) {
   .keyBenefits-Cards {
     grid-template-columns: 1fr;
