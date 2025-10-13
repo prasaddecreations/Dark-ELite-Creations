@@ -453,6 +453,7 @@ body {
     width: 100%;
     background-color: #000;
     color: #fff;
+    position: relative;
   }
 
   .joinAgencyFirstSection{
@@ -521,7 +522,7 @@ body {
     padding-left: 1.5rem;
     padding-right: 4rem;
     border-radius: 50%;
-
+    z-index: 1;
   }
     .joinBox .joinAgencyLogo .insta{
       font-size: 3rem;
@@ -529,7 +530,10 @@ body {
     }
 
   .joinAgencySocailMedia{
-    background-color: #534f4f;
+    background: rgba(0, 0, 0, 0.45);
+    -webkit-backdrop-filter: blur(8px) saturate(120%);
+    backdrop-filter: blur(8px) saturate(120%);
+  
     display: flex;
     justify-content: space-between;
     width: 90%;
@@ -537,7 +541,7 @@ body {
     margin-top: 3.3rem;
     margin-left: 2rem;
     border-radius: 3rem;
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc36;
   }
 
    .joinAgencySocailMedia h1{
@@ -553,6 +557,23 @@ body {
    .joinAgencySocailMedia .arrowright{
     font-size: 2rem;
    }
+
+ .blur-glow {
+    position: absolute;
+    width: 1200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 70%);
+    filter: blur(100px);
+   bottom:0;
+    right: 10;
+    pointer-events: none;
+  }
+
+
+
+
+
 /* END joinAgency */
 
 @media (max-width: 992px){
