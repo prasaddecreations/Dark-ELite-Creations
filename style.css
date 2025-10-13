@@ -964,7 +964,7 @@ body {
   font-size: 16px;
 }
 .feature-heading h1 i{
-  color: white;
+  color: #e60808;
   font-size: 16px;
 }
 .feature-heading h2{
@@ -1008,7 +1008,7 @@ body {
   padding: 13px 15px;
   border-radius: 50%;
   color: #fff;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition: transform 0.3s ease;
 }
 .feat-btn:hover i {
   transform: rotate(-40deg);
@@ -1442,3 +1442,95 @@ body {
 }
 
 /* End Testimonial */
+
+
+/* start latest news section */
+.latestnews-sec{
+  display: flex;
+  flex-wrap: wrap;
+  background-color:#080808;
+  justify-content: center;
+  gap: 50px;
+  padding: 50px 0px;
+}
+
+.lnews-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 90%;
+  gap: 20px;
+  padding: 20px;
+}
+
+.lnews-heading h1{
+  color: white;
+  font-size: 16px;
+}
+.lnews-heading h1 i{
+  color: #e60808;
+  font-size: 16px;
+}
+.lnews-heading h2{
+  color: white;
+  font-size: 44px;
+  margin-top: 4%;
+}
+.lnews-heading h2 span{
+  color: #e60808;
+  font-size: 50px;
+}
+
+.lnews-para p{
+  margin-top: 4%;
+  color: white;
+  font-size: 18px;
+  margin-top: 9%;
+}
+
+.lnews-cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 90%;
+  gap: 20px;
+  padding: 20px;
+}
+
+.news-card1 img{
+  width: 80%;
+  object-fit: cover;
+}
+.news-card1 h1{
+  color: white;
+  font-size: 22px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.ncard-btn{
+  color: #e60808;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+.ncard-btn:hover i {
+  transform: rotate(-40deg);
+}
+.news-card2 img{
+  width: 80%;
+  object-fit: cover;
+}
+.news-card2 h1{
+  color: white;
+  font-size: 22px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.news-card3 img{
+  width: 80%;
+  object-fit: cover;
+}
+.news-card3 h1{
+  color: white;
+  font-size: 22px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+/* End latest news section */
