@@ -1025,7 +1025,7 @@ body {
 .featimg1{
   width: 90%;
   height: 80%;
-  border: 1px solid rgba(255, 255, 255, 0.17);
+  border: 1px solid rgba(255, 255, 255, 0.234);
   text-align: center;
   align-content: center;
   justify-self: end;
@@ -1054,7 +1054,7 @@ body {
 .featimg2{
   width: 70%;
   height: 80%;
-  border: 1px solid rgba(255, 255, 255, 0.17);
+  border: 1px solid rgba(255, 255, 255, 0.234);
   text-align: center;
   align-content: center;
   padding: 30px;
