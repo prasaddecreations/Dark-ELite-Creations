@@ -1083,7 +1083,7 @@ body {
   .features{
     width: 100%;
     flex-direction: column;
-    padding: 2rem 2rem;
+    padding: 1rem 1rem;
     gap: 0;
   }
   .feature-grid{
