@@ -1508,6 +1508,7 @@ body {
 .ncard-btn{
   color: #e60808;
   text-decoration: none;
+  font-size: 18px;
   transition: transform 0.3s ease;
 }
 .ncard-btn:hover i {
