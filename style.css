@@ -1110,10 +1110,12 @@ body {
     font-size: 15px;
   }
   .featimg1{
+    height: 50%;
     justify-self: unset;
   }
   .featimg2{
     width: 90%;
+    height: 50%;
     justify-self: unset;
   }
   .featimg2 h1{
