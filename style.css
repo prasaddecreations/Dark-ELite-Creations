@@ -1031,6 +1031,11 @@ body {
   justify-self: end;
   padding: 30px;
   border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transform: translateZ(0);
+  will-change: transform;
 }
 
 .featimg1 img{
@@ -1038,7 +1043,60 @@ body {
   height: 60%;
   border-radius: 20px;
   object-fit: cover;
+  transition: transform 0.6s ease;
+  will-change: transform;
 }
+
+/* Frosted glass shine layer */
+.featimg1::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -70%;
+  width: 60%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  filter: blur(6px);
+  transform: skewX(-25deg);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Slight zoom on image */
+.featimg1:hover img {
+  transform: scale(1.05);
+}
+
+/* Smooth frosted glass animation */
+.featimg1:hover::after {
+  animation: frostedShine1 2.2s ease-in-out forwards;
+  opacity: 1;
+}
+
+@keyframes frostedShine1 {
+  0% {
+    left: -80%;
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.6;
+  }
+  50% {
+    left: 130%;
+    opacity: 0.3;
+  }
+  100% {
+    left: 150%;
+    opacity: 0;
+  }
+}
+
+
 .featimg1 h1{
   color: white;
   font-size: 22px;
@@ -1059,6 +1117,11 @@ body {
   align-content: center;
   padding: 30px;
   border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transform: translateZ(0);
+  will-change: transform;
 }
 
 .featimg2 img{
@@ -1066,7 +1129,59 @@ body {
   height: 60%;
   border-radius: 20px;
   object-fit: cover;
+  transition: transform 0.6s ease;
+  will-change: transform;
 }
+
+/* Frosted glass shine layer */
+.featimg2::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -70%;
+  width: 60%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  filter: blur(6px);
+  transform: skewX(-25deg);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Slight zoom on image */
+.featimg2:hover img {
+  transform: scale(1.05);
+}
+
+/* Smooth frosted glass animation */
+.featimg2:hover::after {
+  animation: frostedShine2 2.2s ease-in-out forwards;
+  opacity: 1;
+}
+
+@keyframes frostedShine2 {
+  0% {
+    left: -80%;
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.6;
+  }
+  50% {
+    left: 130%;
+    opacity: 0.3;
+  }
+  100% {
+    left: 150%;
+    opacity: 0;
+  }
+}
+
 .featimg2 h1{
   color: white;
   font-size: 22px;
