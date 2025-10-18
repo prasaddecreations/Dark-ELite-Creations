@@ -81,7 +81,7 @@
     right: 10px;
     width: 60px;
     height: 60px;
-    background: #e60808;
+    background: #fdfdfd;
 }
 
 .square-decor::after {
@@ -91,7 +91,7 @@
     right: -20px;
     width: 60px;
     height: 60px;
-    background: #fdfdfd;
+    background: #e60808;
 }
 
 .about-heading h2 {
