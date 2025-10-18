@@ -101,7 +101,10 @@
     line-height: 1.2;
     color: white;
 }
-
+.about-heading h2 span{
+    color: #e60808;
+    font-size: 40px;
+}
 .divider {
     display: flex;
     align-items: center;
