@@ -356,7 +356,14 @@ h2 {
   margin-bottom: 20px;
   padding-top: 30px;
   color: #e60808;
-
+}
+p{
+  position: relative;
+  text-align: center;
+  z-index: 2;
+  color: white;
+  line-height: 1.4rem;
+  font-size: 18px;
 }
 
 
@@ -387,13 +394,18 @@ h2 {
 }
 
 @media (max-width: 992px) {
+  .drop-animation{
+    height: 60%;
+  }
    #scene {
     width: 90%;  /* a bit wider on small screens */
   }
   h2 {
     font-size: 28px;
   }
-
+  p{
+    font-size: 16px;
+  }
   .label {
     font-size: 13px;
     padding: 8px 10px;
