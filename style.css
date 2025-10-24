@@ -343,11 +343,12 @@ body {
   color: #e60808;
 }
 
-.drop p{
+.drop p {
   font-size: 18px;
   color: white;
   line-height: 1.6rem;
 }
+
 .scene {
   position: absolute;
   top: 0;
@@ -397,11 +398,13 @@ body {
     font-size: 26px;
     margin-top: 25px;
   }
-  .drop p{
+
+  .drop p {
     font-size: 14px;
     text-align: justify;
   }
-  .drop p br{
+
+  .drop p br {
     display: none;
   }
 

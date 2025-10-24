@@ -47,10 +47,10 @@ const labels = [
 ];
 
 const { Engine, Runner, World, Bodies } = Matter;
-  let engine, world, runner;
-  let hasFallen = false;
+let engine, world, runner;
+let hasFallen = false;
 
-  function startFalling() {
+function startFalling() {
     if (hasFallen) return;
     hasFallen = true;
 
@@ -72,52 +72,52 @@ const { Engine, Runner, World, Bodies } = Matter;
     World.add(world, [ground, leftWall, rightWall]);
 
     labels.forEach((text) => {
-      const el = document.createElement('div');
-      el.className = 'label';
-      el.innerText = text;
-      container.appendChild(el);
+        const el = document.createElement('div');
+        el.className = 'label';
+        el.innerText = text;
+        container.appendChild(el);
 
-      const safePadding = width < 992 ? 80 : 150;
-      const x = Math.random() * (width - safePadding * 2) + safePadding;
-      const y = -Math.random() * 300 - 50;
+        const safePadding = width < 992 ? 80 : 150;
+        const x = Math.random() * (width - safePadding * 2) + safePadding;
+        const y = -Math.random() * 300 - 50;
 
-      const body = Bodies.rectangle(x, y, el.offsetWidth, el.offsetHeight, {
-        restitution: 0.2,
-        friction: 0.8,
-        frictionAir: 0.02,
-        angle: (Math.random() - 0.5) * 0.6,
-      });
-      body.el = el;
-      World.add(world, body);
+        const body = Bodies.rectangle(x, y, el.offsetWidth, el.offsetHeight, {
+            restitution: 0.2,
+            friction: 0.8,
+            frictionAir: 0.02,
+            angle: (Math.random() - 0.5) * 0.6,
+        });
+        body.el = el;
+        World.add(world, body);
 
-      // Fade in effect
-      setTimeout(() => { el.style.opacity = 1; }, 300);
+        // Fade in effect
+        setTimeout(() => { el.style.opacity = 1; }, 300);
     });
 
     runner = Runner.create();
     Runner.run(runner, engine);
 
     (function update() {
-      requestAnimationFrame(update);
-      world.bodies.forEach(body => {
-        if (body.el) {
-          body.el.style.left = body.position.x + 'px';
-          body.el.style.top = body.position.y + 'px';
-          body.el.style.transform = `translate(-50%, -50%) rotate(${body.angle}rad)`;
-        }
-      });
+        requestAnimationFrame(update);
+        world.bodies.forEach(body => {
+            if (body.el) {
+                body.el.style.left = body.position.x + 'px';
+                body.el.style.top = body.position.y + 'px';
+                body.el.style.transform = `translate(-50%, -50%) rotate(${body.angle}rad)`;
+            }
+        });
     })();
-  }
+}
 
-  // Scroll trigger
-  const section = document.querySelector('.drop');
-  const observer = new IntersectionObserver(entries => {
+// Scroll trigger
+const section = document.querySelector('.drop');
+const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        startFalling();
-        observer.disconnect();
-      }
+        if (entry.isIntersecting) {
+            startFalling();
+            observer.disconnect();
+        }
     });
-  }, { threshold: 0.3 });
+}, { threshold: 0.3 });
 
-  observer.observe(section);
+observer.observe(section);
