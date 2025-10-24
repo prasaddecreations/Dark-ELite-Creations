@@ -389,7 +389,7 @@ body {
 /* Mobile responsive (below 992px) */
 @media (max-width: 992px) {
   .drop {
-    height: 60vh;
+    height: 70vh;
     padding: 16px;
   }
 
