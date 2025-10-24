@@ -47,69 +47,77 @@ const labels = [
 ];
 
 const { Engine, Runner, World, Bodies } = Matter;
-const container = document.getElementById('scene');
-const section = document.getElementById('fall-section');
-const width = window.innerWidth;
-const height = container.offsetHeight;
+  let engine, world, runner;
+  let hasFallen = false;
 
-let started = false;
+  function startFalling() {
+    if (hasFallen) return;
+    hasFallen = true;
 
-function startFalling() {
-    if (started) return;
-    started = true;
+    engine = Engine.create();
+    world = engine.world;
+    world.gravity.y = 0.6;
 
-    const engine = Engine.create();
-    const world = engine.world;
-    world.gravity.y = 0.65;
+    const drop = document.querySelector('.drop');
+    const container = document.querySelector('.scene');
+    // const width = window.innerWidth;
+    // const height = window.innerHeight * 0.7;
+    const width = drop.offsetWidth;
+    const height = drop.offsetHeight; // ✅ Actual section height
 
-    const ground = Bodies.rectangle(width / 2, height, width, 50, { isStatic: true });
-    const leftWall = Bodies.rectangle(0, height / 2, 20, height, { isStatic: true });
-    const rightWall = Bodies.rectangle(width, height / 2, 20, height, { isStatic: true });
+    // Boundaries
+    const ground = Bodies.rectangle(width / 2, height + 20, width, 60, { isStatic: true });
+    const leftWall = Bodies.rectangle(-30, height / 2, 60, height, { isStatic: true });
+    const rightWall = Bodies.rectangle(width + 30, height / 2, 60, height, { isStatic: true });
     World.add(world, [ground, leftWall, rightWall]);
 
     labels.forEach((text) => {
-        const el = document.createElement('div');
-        el.className = 'label';
-        el.innerText = text;
-        container.appendChild(el);
+      const el = document.createElement('div');
+      el.className = 'label';
+      el.innerText = text;
+      container.appendChild(el);
 
-        const x = Math.random() * (width - 200) + 100;
-        const y = -Math.random() * 300 - 100;
-        const body = Bodies.rectangle(x, y, el.offsetWidth, el.offsetHeight, {
-            restitution: 0.12,
-            friction: 1,
-            frictionAir: 0.03,
-            angle: (Math.random() - 0.5) * 0.8,
-        });
-        body.el = el;
-        World.add(world, body);
+      const safePadding = width < 992 ? 80 : 150;
+      const x = Math.random() * (width - safePadding * 2) + safePadding;
+      const y = -Math.random() * 300 - 50;
+
+      const body = Bodies.rectangle(x, y, el.offsetWidth, el.offsetHeight, {
+        restitution: 0.2,
+        friction: 0.8,
+        frictionAir: 0.02,
+        angle: (Math.random() - 0.5) * 0.6,
+      });
+      body.el = el;
+      World.add(world, body);
+
+      // Fade in effect
+      setTimeout(() => { el.style.opacity = 1; }, 300);
     });
 
-    const runner = Runner.create();
+    runner = Runner.create();
     Runner.run(runner, engine);
 
     (function update() {
-        requestAnimationFrame(update);
-        world.bodies.forEach(body => {
-            if (body.el) {
-                body.el.style.opacity = 1;
-                body.el.style.left = body.position.x + 'px';
-                body.el.style.top = body.position.y + 'px';
-                body.el.style.transform = `translate(-50%, -50%) rotate(${body.angle}rad)`;
-            }
-        });
-    })();
-}
-
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            startFalling();
-            observer.disconnect();
+      requestAnimationFrame(update);
+      world.bodies.forEach(body => {
+        if (body.el) {
+          body.el.style.left = body.position.x + 'px';
+          body.el.style.top = body.position.y + 'px';
+          body.el.style.transform = `translate(-50%, -50%) rotate(${body.angle}rad)`;
         }
+      });
+    })();
+  }
+
+  // Scroll trigger
+  const section = document.querySelector('.drop');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        startFalling();
+        observer.disconnect();
+      }
     });
-}, { threshold: 0.4 });
+  }, { threshold: 0.3 });
 
-observer.observe(section);
-
-window.addEventListener('resize', () => location.reload());
+  observer.observe(section);
