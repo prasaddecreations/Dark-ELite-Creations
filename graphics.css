@@ -1,0 +1,286 @@
+/* body */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Start Hero section */
+.hero {
+    display: flex;
+    background: url("images/drawing-pad.jpg") center / cover no-repeat;
+    /* background-color: #0808082e; */
+    width: 100%;
+    min-height: 90vh;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: #0000009d;
+}
+
+.hero-text {
+    text-align: center;
+    align-content: center;
+    z-index: 1;
+}
+
+.hero-text h2 {
+    font-size: 5rem;
+    color: #e60808;
+    font-family: 'Open Sans';
+}
+
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #f8f8f8;
+    color: #111;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 14px 28px;
+    border-radius: 40px;
+    text-decoration: none;
+    margin-top: 30px;
+    transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+    background: #e0e0e0;
+    transform: translateY(-3px);
+}
+
+/* End Hero section */
+
+/* Start About Section */
+.about {
+    display: flex;
+    padding: 80px 10%;
+    flex-wrap: wrap;
+    background-color: #080808;
+    height: 80vh;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 90%;
+    padding-top: 0px;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    gap: 60px;
+}
+
+/* Circle made of two side-by-side halves */
+.split-circle {
+    position: relative;
+    height: 62vh;
+    transform: rotate(10deg);
+}
+
+.half {
+    position: absolute;
+    width: 98%;
+    /* slightly smaller to create spacing */
+    height: 98%;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+}
+
+.half img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: rotate(-10deg) scale(1.05);
+}
+
+/* Left half - slightly lower */
+.half.left {
+    clip-path: polygon(0 0, 49% 0, 49% 100%, 0 100%);
+    top: 10px;
+    /* slightly down */
+    left: 0;
+}
+
+/* Right half - slightly higher */
+.half.right {
+    clip-path: polygon(52% 0, 100% 0, 100% 100%, 51% 100%);
+    top: -10px;
+    /* slightly up */
+    left: 0;
+}
+
+/* Divider gap line (visible space illusion) */
+.split-circle::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 10px;
+    /* width of the gap */
+    background: #000;
+    /* background color to match body */
+    transform: translateX(-50%);
+    z-index: 5;
+}
+
+.content {
+    text-align: start;
+    justify-content: center;
+    align-content: center;
+}
+
+.content h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 18px;
+    color: #ffffff;
+}
+
+.content h2 span {
+    color: #e60808;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.content p {
+    font-size: 16px;
+    color: #bbb;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+/* End About Section */
+
+/* Start What We Do Section */
+.what {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #080808;
+    padding: 50px 50px;
+}
+
+.what-head {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.what-head h2 {
+    color: #e60808;
+    font-size: 40px;
+}
+
+.what-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    padding-top: 60px;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.card {
+    background: rgb(32, 32, 32);
+    width: 280px;
+    height: 240px;
+    padding: 30px 25px;
+    transform: skewY(-3deg);
+    border: solid 2px #e608083e;
+    border-radius: 16px;
+}
+
+.card img {
+    width: 20%;
+    height: 20%;
+    margin-bottom: 10px;
+    transform: skewY(3deg);
+
+}
+
+.card h3 {
+    font-size: 18px;
+    color: #e60808;
+    margin-bottom: 10px;
+    font-weight: 600;
+    transform: skewY(3deg);
+}
+
+.card p {
+    font-size: 14px;
+    color: #ececec;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    transform: skewY(3deg);
+    text-align: justify;
+
+}
+
+/* End What We Do Section */
+
+
+/* Mobile Responsive */
+@media (max-width: 992px) {
+    .hero-text h2{
+        font-size: 48px;
+    }
+    .content h2{
+        font-size: 22px;
+    }
+    .content h2 span{
+        font-size: 22px;
+    }
+    .content p{
+        font-size: 16px;
+    }
+    .about{
+        padding: 10px;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+    }
+    .about-grid{
+        grid-template-columns: 1fr;
+        gap: 10px;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+    .split-circle {
+        height: 30vh;
+        transform: rotate(9deg);
+    }
+    .half.left {
+        top: 8px;
+    }
+    .half.right {
+        top: -8px;
+    }
+    .what{
+        padding-top: 0;
+        padding-bottom: 30px;
+    }
+    .what-grid{
+        grid-template-columns: 1fr;
+    }
+}
