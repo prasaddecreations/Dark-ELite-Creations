@@ -195,32 +195,43 @@
     align-content: center;
     justify-items: center;
     align-items: center;
-    gap: 40px;
+    gap: 20px;
+    /* border: 2px solid white; */
 }
 
 .card {
     background: rgb(32, 32, 32);
-    width: 280px;
-    height: 240px;
+    width: 330px;
+    height: 300px;
     padding: 30px 25px;
-    transform: skewY(-3deg);
+
     border: solid 2px #e608083e;
     border-radius: 16px;
+    align-content: center;
+}
+.card:hover{
+    transform: skewY(-3deg);
 }
 
 .card img {
-    width: 20%;
+    width: 26%;
     height: 20%;
     margin-bottom: 10px;
+    
+}
+.card:hover img {
     transform: skewY(3deg);
 
 }
 
 .card h3 {
-    font-size: 18px;
+    font-size: 20px;
     color: #e60808;
     margin-bottom: 10px;
     font-weight: 600;
+    
+}
+.card:hover h3{
     transform: skewY(3deg);
 }
 
@@ -229,9 +240,12 @@
     color: #ececec;
     margin-bottom: 20px;
     line-height: 1.6;
+    text-align: justify;
+}
+.card:hover p{
     transform: skewY(3deg);
     text-align: justify;
-
+    
 }
 
 /* End What We Do Section */
