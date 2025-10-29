@@ -204,21 +204,77 @@
     width: 330px;
     height: 300px;
     padding: 30px 25px;
-
     border: solid 2px #e608083e;
     border-radius: 16px;
     align-content: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transform: translateZ(0);
+    will-change: transform;
 }
-.card:hover{
+
+.card:hover {
     transform: skewY(-3deg);
+    background: #00000000;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -70%;
+  width: 60%;
+  height: 200%;
+  background: linear-gradient(120deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.4) 50%,
+      rgba(255, 255, 255, 0) 100%);
+  filter: blur(6px);
+  transform: skewX(-25deg);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Slight zoom on image */
+.card:hover img {
+  transform: scale(1.05);
+}
+
+/* Smooth frosted glass animation */
+.card:hover::after {
+  animation: cardShine1 2.2s ease-in-out forwards;
+  opacity: 1;
+}
+
+@keyframes cardShine1 {
+  0% {
+    left: -80%;
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 0.6;
+  }
+
+  50% {
+    left: 130%;
+    opacity: 0.3;
+  }
+
+  100% {
+    left: 150%;
+    opacity: 0;
+  }
 }
 
 .card img {
     width: 26%;
     height: 20%;
     margin-bottom: 10px;
-    
+
 }
+
 .card:hover img {
     transform: skewY(3deg);
 
@@ -229,9 +285,10 @@
     color: #e60808;
     margin-bottom: 10px;
     font-weight: 600;
-    
+
 }
-.card:hover h3{
+
+.card:hover h3 {
     transform: skewY(3deg);
 }
 
@@ -242,10 +299,11 @@
     line-height: 1.6;
     text-align: justify;
 }
-.card:hover p{
+
+.card:hover p {
     transform: skewY(3deg);
     text-align: justify;
-    
+
 }
 
 /* End What We Do Section */
@@ -253,25 +311,30 @@
 
 /* Mobile Responsive */
 @media (max-width: 992px) {
-    .hero-text h2{
+    .hero-text h2 {
         font-size: 48px;
     }
-    .content h2{
+
+    .content h2 {
         font-size: 22px;
     }
-    .content h2 span{
+
+    .content h2 span {
         font-size: 22px;
     }
-    .content p{
+
+    .content p {
         font-size: 16px;
     }
-    .about{
+
+    .about {
         padding: 10px;
         justify-content: center;
         align-content: center;
         text-align: center;
     }
-    .about-grid{
+
+    .about-grid {
         grid-template-columns: 1fr;
         gap: 10px;
         justify-content: center;
@@ -280,21 +343,26 @@
         padding-top: 50px;
         padding-bottom: 20px;
     }
+
     .split-circle {
         height: 30vh;
         transform: rotate(9deg);
     }
+
     .half.left {
         top: 8px;
     }
+
     .half.right {
         top: -8px;
     }
-    .what{
+
+    .what {
         padding-top: 0;
         padding-bottom: 30px;
     }
-    .what-grid{
+
+    .what-grid {
         grid-template-columns: 1fr;
     }
 }
