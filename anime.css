@@ -9,7 +9,7 @@
 /* Start Hero section */
 .hero {
     display: flex;
-    background: url("images/corporate-management-min.jpg") center / cover no-repeat;
+    background: url("images/creative-cubes.jpg") center / cover no-repeat;
     /* background-color: #0808082e; */
     width: 100%;
     min-height: 90vh;
