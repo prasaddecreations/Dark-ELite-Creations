@@ -17,7 +17,7 @@ body {
 /* Hero Section */
 .hero {
   height: 70vh;
-  background: url("image/page-header-bg.jpg"),
+  background: url("images/page-header-bg.jpg"),
     linear-gradient(180deg, #0a0a0a, #111);
   background-size: cover;
   display: flex;
